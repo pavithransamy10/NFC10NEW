@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('https://images8.alphacoders.com/354/thumb-1920-354039.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensures the container stays above the background overlay */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #fff; /* Set the color of the title text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
+  font-size: 80px; /* Increase the font size for the title */
+}
+
+button {
+  font-size: 24px; /* Increase the font size for the button */
+  padding: 10px 20px;
+}
+
+/* Add a semi-transparent overlay */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the opacity to your preference */
+  z-index: 0;
+}
