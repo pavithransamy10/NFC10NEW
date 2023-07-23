@@ -61,8 +61,8 @@ if ('NDEFReader' in window) {
 } else {
 	const h1 = document.querySelector('h1');
   console.log("NFC not supported by the browser");
-  h1.textContent = "Food is  fresh!";
-      h1.style.color = "green";
+  h1.textContent = "NFC not supported by the browser";
+      h1.style.color = "red";
 }
 
 
