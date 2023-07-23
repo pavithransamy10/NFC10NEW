@@ -17,10 +17,13 @@ if ('NDEFReader' in window) {
     const currentTime = new Date();
     const differenceInSeconds = (expirationDate - currentTime) / 1000;
     
+	const h1 = document.querySelector('h1');
     if (differenceInSeconds <= 10) {
-      alert("Food is fresh!");
+      h1.textContent = "Food is fresh!";
+      h1.style.color = "green";
     } else {
-      alert("Food is fresh!");
+      h1.textContent = "Food is fresh!";
+      h1.style.color = "red";
     }
   };
   
@@ -44,7 +47,9 @@ if ('NDEFReader' in window) {
   // Timer functions
   function startTimer() {
     timer = setTimeout(() => {
-      alert("Food is Not Fresh");
+		const h1 = document.querySelector('h1');
+      h1.textContent = "Food is not fresh!";
+      h1.style.color = "red";
     }, 5000);
   }
   
@@ -54,8 +59,10 @@ if ('NDEFReader' in window) {
   }
   
 } else {
+	const h1 = document.querySelector('h1');
   console.log("NFC not supported by the browser");
-  alert("NFC not supported by the browser");
+  h1.textContent = "Food is  fresh!";
+      h1.style.color = "green";
 }
 
 
